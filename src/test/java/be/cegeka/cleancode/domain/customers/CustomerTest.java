@@ -8,16 +8,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CustomerTest {
 
-private Customer customer;
+    private Customer customer;
 
     @Before
     public void setUp() throws Exception {
         customer = aCustomer()
-                        .withFirstName("Seppe")
-                        .withLastName("Gielen")
-                        .withInss("123")
-                        .withId(10)
-                        .build();
+                .withName("Seppe Gielen")
+                .withInss("123")
+                .withId(10)
+                .build();
     }
 
     @Test
@@ -26,13 +25,8 @@ private Customer customer;
     }
 
     @Test
-    public void whenGetFirstName_shouldReturnFirstName() throws Exception {
-        assertThat(customer.getFirstName()).isEqualTo("Seppe");
-    }
-
-    @Test
-    public void whenGetLastName_shouldReturnLastName() throws Exception {
-        assertThat(customer.getLastName()).isEqualTo("Gielen");
+    public void whenGetName_shouldReturnName() throws Exception {
+        assertThat(customer.getName()).isEqualTo("Seppe Gielen");
     }
 
     @Test
@@ -46,10 +40,10 @@ private Customer customer;
     }
 
     @Test
-    public void equals_ObjectWithSameIdAndFirstName_isTrue() throws Exception {
+    public void equals_ObjectWithSameIdAndName_isTrue() throws Exception {
         assertThat(customer).isEqualTo(aCustomer()
                 .withId(10)
-                .withFirstName("Seppe")
+                .withName("Seppe Gielen")
                 .build());
     }
 
@@ -66,8 +60,8 @@ private Customer customer;
     @Test
     public void equals_ObjectWithOtherID_IsFalse() throws Exception {
         assertThat(customer).isNotEqualTo(aCustomer()
-            .withId(5)
-            .withFirstName("Seppe")
-            .build());
+                .withId(5)
+                .withName("Seppe Gielen")
+                .build());
     }
 }

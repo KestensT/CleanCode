@@ -2,25 +2,19 @@ package be.cegeka.cleancode.domain.customers;
 
 public class CustomerBuilder {
 
-    private String firstName;
-    private String lastName;
+    private String name;
     private String inss;
     private String city;
     private String postalCode;
 
 
     public Customer buildFull() {
-        Customer customer = new Customer(firstName, lastName, inss, city, postalCode);
+        Customer customer = new Customer(name, inss, city, postalCode);
         return customer;
     }
 
-    public CustomerBuilder withLastName(String lastName) {
-        this.lastName = lastName;
-        return this;
-    }
-
-    public CustomerBuilder withFirstName(String firstName) {
-        this.firstName = firstName;
+    public CustomerBuilder withName(String name) {
+        this.name = name;
         return this;
     }
 

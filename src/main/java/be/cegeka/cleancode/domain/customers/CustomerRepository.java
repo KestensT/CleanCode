@@ -26,5 +26,8 @@ public class CustomerRepository {
                 .getSingleResult();
     }
 
+    public Customer getCustomerById(int customerId) {
+        return entityManager.find(Customer.class, customerId);
+    }
 
 }

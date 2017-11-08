@@ -26,12 +26,11 @@ public class CustomerController {
 
     @PostMapping
     public void addNewCustomer(
-            @RequestParam(value = "lastName", required = true) String lastName,
-            @RequestParam(value = "firstName", required = true) String firstName,
+            @RequestParam(value = "name", required = true) String name,
             @RequestParam(value = "inss", required = true) String inss,
             @RequestParam(value = "city", required = true) String city,
             @RequestParam(value = "postalCode", required = true) String postalCode) {
-        customerService.addCustomer(firstName, lastName, inss, city, postalCode);
+        customerService.addCustomer(name, inss, city, postalCode);
     }
 
 }
