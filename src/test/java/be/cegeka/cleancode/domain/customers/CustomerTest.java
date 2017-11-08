@@ -1,10 +1,9 @@
-package be.cegeka.cleancode.domain;
+package be.cegeka.cleancode.domain.customers;
 
-import be.cegeka.cleancode.domain.customers.Customer;
 import org.junit.Before;
 import org.junit.Test;
 
-import static be.cegeka.cleancode.domain.CustomerTestBuilder.*;
+import static be.cegeka.cleancode.domain.customers.CustomerTestBuilder.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CustomerTest {

@@ -1,6 +1,5 @@
-package be.cegeka.cleancode.domain;
+package be.cegeka.cleancode.domain.customers;
 
-import be.cegeka.cleancode.domain.customers.Customer;
 import org.springframework.test.util.ReflectionTestUtils;
 
 public class CustomerTestBuilder {
@@ -18,7 +17,8 @@ public class CustomerTestBuilder {
                 .withFirstName("Seppe")
                 .withLastName("Gielen")
                 .withInss("123")
-                .withCity("Leuven");
+                .withCity("Leuven")
+                ;
     }
 
     public Customer build(){
@@ -45,6 +45,10 @@ public class CustomerTestBuilder {
     }
     public CustomerTestBuilder withFirstName(String firstName) {
         this.firstName = firstName;
+        return this;
+    }
+    public CustomerTestBuilder withPostalCode (String postalCode){
+        this.postalCode = postalCode;
         return this;
     }
 

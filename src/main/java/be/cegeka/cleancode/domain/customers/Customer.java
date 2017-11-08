@@ -21,7 +21,7 @@ public class Customer {
     @Column(name = "POSTALCODE")
     private String postalCode;
 
-    public Customer(String firstName, String lastName, int id, String inss, String city, String postalCode){
+    public Customer(){
     }
 
     public Customer(String firstName, String lastName, String inss, String city, String postalCode){
