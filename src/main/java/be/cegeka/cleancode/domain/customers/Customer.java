@@ -20,16 +20,27 @@ public class Customer {
     private String city;
     @Column(name = "POSTALCODE")
     private String postalCode;
+    @OneToOne
+    @JoinColumn(name = "LOYALTY_ID")
     private LoyaltyCard loyaltyCard;
 
-    public Customer(){
+    public Customer() {
     }
 
-    public Customer(String name, String inss, String city, String postalCode){
+    public Customer(String name, String inss, String city, String postalCode) {
         this.name = name;
         this.inss = inss;
         this.city = city;
         this.postalCode = postalCode;
+    }
+
+    public Customer(int id, String name, String inss, String city, String postalCode, LoyaltyCard loyaltyCard) {
+        this.id = id;
+        this.name = name;
+        this.inss = inss;
+        this.city = city;
+        this.postalCode = postalCode;
+        this.loyaltyCard = loyaltyCard;
     }
 
     public int getId() {
@@ -39,7 +50,6 @@ public class Customer {
     public String getName() {
         return name;
     }
-
 
 
     public String getInss() {
@@ -78,7 +88,14 @@ public class Customer {
         return result;
     }
 
+    public LoyaltyCard getLoyaltyCard() {
+        return loyaltyCard;
+    }
+
     public void setLoyaltyCard(LoyaltyCard loyaltyCard) {
         this.loyaltyCard = loyaltyCard;
     }
 }
+
+
+

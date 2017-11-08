@@ -6,6 +6,7 @@ import be.cegeka.cleancode.domain.customers.CustomerRepository;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.util.List;
 
 @Named
 public class LoyaltyCardService {
@@ -22,4 +23,10 @@ public class LoyaltyCardService {
         loyaltyCardRepository.assignLoyaltyCardToMember(customer, loyaltyCard);
         customer.setLoyaltyCard(loyaltyCard);
     }
+
+    public List<LoyaltyCard> getAllCards(){
+        return loyaltyCardRepository.getAllLoyaltyCards();
+    }
+
+
 }

@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class LoyaltyCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "LOYALTY_CARD_ID")
+    @Column(name = "LOYALTY_ID")
     private int id;
     @Column(name = "BARCODE")
     private String barcode;
@@ -24,6 +24,14 @@ public class LoyaltyCard {
 
     public int getId() {
         return id;
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public int getBonusPoints() {
+        return bonusPoints;
     }
 }
 

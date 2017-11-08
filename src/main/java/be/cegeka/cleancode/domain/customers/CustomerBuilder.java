@@ -1,12 +1,15 @@
 package be.cegeka.cleancode.domain.customers;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 public class CustomerBuilder {
 
     private String name;
     private String inss;
     private String city;
     private String postalCode;
-
+    private int id;
 
     public Customer buildFull() {
         Customer customer = new Customer(name, inss, city, postalCode);
