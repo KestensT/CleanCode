@@ -4,7 +4,7 @@ package be.cegeka.cleancode.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "CUSTOMER")
+@Table(name = "CUSTOMERS")
 public class Customer {
 
     @Id
@@ -14,13 +14,22 @@ public class Customer {
     private String firstName;
     @Column(name = "LASTNAME")
     private String lastName;
+    @Column(name = "INSS")
+    private String inss;
+    @Column(name = "CITY")
+    private String city;
+    @Column(name = "POSTALCODE")
+    private String postalCode;
 
-    public Customer(){
+    public Customer(String firstName, String lastName, int id, String inss, String city, String postalCode){
     }
 
-    public Customer(String firstName, String lastName){
+    public Customer(String firstName, String lastName, String inss, String city, String postalCode){
         this.firstName = firstName;
         this.lastName = lastName;
+        this.inss = inss;
+        this.city = city;
+        this.postalCode = postalCode;
     }
 
     public int getId() {
@@ -33,6 +42,18 @@ public class Customer {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getInss() {
+        return inss;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
     }
 
     @Override
