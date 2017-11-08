@@ -1,4 +1,4 @@
-package be.cegeka.cleancode.domain;
+package be.cegeka.cleancode.domain.customers;
 
 
 import javax.persistence.*;

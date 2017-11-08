@@ -1,5 +1,6 @@
 package be.cegeka.cleancode.domain;
 
+import be.cegeka.cleancode.domain.customers.Customer;
 import org.springframework.test.util.ReflectionTestUtils;
 
 public class CustomerTestBuilder {
